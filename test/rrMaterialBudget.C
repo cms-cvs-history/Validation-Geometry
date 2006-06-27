@@ -120,14 +120,14 @@ rrMaterialBudget(TString detector) {
       prof_x0_det_OTH   = (TProfile*)subDetectorFile->Get("610");
       prof_x0_det_AIR   = (TProfile*)subDetectorFile->Get("710");
       // add to summary histogram
-      hist_x0_total->Add( (TH1D*)prof_x0_det_total->ProjectionX(), +1.000 );
-      hist_x0_SUP->Add(   (TH1D*)prof_x0_det_SUP->ProjectionX()  , +1.000 );
-      hist_x0_SEN->Add(   (TH1D*)prof_x0_det_SEN->ProjectionX()  , +1.000 );
-      hist_x0_CAB->Add(   (TH1D*)prof_x0_det_CAB->ProjectionX()  , +1.000 );
-      hist_x0_COL->Add(   (TH1D*)prof_x0_det_COL->ProjectionX()  , +1.000 );
-      hist_x0_ELE->Add(   (TH1D*)prof_x0_det_ELE->ProjectionX()  , +1.000 );
-      hist_x0_OTH->Add(   (TH1D*)prof_x0_det_OTH->ProjectionX()  , +1.000 );
-      hist_x0_AIR->Add(   (TH1D*)prof_x0_det_AIR->ProjectionX()  , +1.000 );
+      hist_x0_total->Add( (TH1D*)prof_x0_det_total->ProjectionX("B"), +1.000 );
+      hist_x0_SUP->Add(   (TH1D*)prof_x0_det_SUP->ProjectionX("B")  , +1.000 );
+      hist_x0_SEN->Add(   (TH1D*)prof_x0_det_SEN->ProjectionX("B")  , +1.000 );
+      hist_x0_CAB->Add(   (TH1D*)prof_x0_det_CAB->ProjectionX("B")  , +1.000 );
+      hist_x0_COL->Add(   (TH1D*)prof_x0_det_COL->ProjectionX("B")  , +1.000 );
+      hist_x0_ELE->Add(   (TH1D*)prof_x0_det_ELE->ProjectionX("B")  , +1.000 );
+      hist_x0_OTH->Add(   (TH1D*)prof_x0_det_OTH->ProjectionX("B")  , +1.000 );
+      hist_x0_AIR->Add(   (TH1D*)prof_x0_det_AIR->ProjectionX("B")  , +1.000 );
     }
   }
   //
