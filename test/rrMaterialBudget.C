@@ -39,8 +39,13 @@ using namespace std;
 rrMaterialBudget(TString detector) {
   // detector
   theDetector = detector;
-  if(theDetector!="TIB" && theDetector!="TIDF" && theDetector!="TIDB" && theDetector!="TOB" && theDetector!="TEC" && theDetector!="TkStrct" && theDetector!="Tracker" && theDetector!="TrackerSum"){
-    cerr << "rMaterialBudget - ERROR detector not found " << theDetector << endl;
+  if(
+     theDetector!="TIB" && theDetector!="TIDF" && theDetector!="TIDB" 
+     && theDetector!="TOB" && theDetector!="TEC" && theDetector!="TkStrct" 
+     && theDetector!="PixBar" && theDetector!="PixFwdPlus" && theDetector!="PixFwdMinus" 
+     && theDetector!="Tracker" && theDetector!="TrackerSum"
+     ){
+    cerr << "rrMaterialBudget - ERROR detector not found " << theDetector << endl;
     break;
   }
   //
@@ -79,7 +84,7 @@ rrMaterialBudget(TString detector) {
   //
   if(theDetector=="TrackerSum") {
     TString subDetector = "TIB";
-    for(unsigned int i_detector=1; i_detector<=5; i_detector++) {
+    for(unsigned int i_detector=1; i_detector<=8; i_detector++) {
       switch(i_detector) {
       case 1: {
 	subDetector = "TIDF";
@@ -99,6 +104,18 @@ rrMaterialBudget(TString detector) {
       }
       case 5: {
 	subDetector = "TkStrct";
+	break;
+      }
+      case 6: {
+	subDetector = "PixBar";
+	break;
+      }
+      case 7: {
+	subDetector = "PixFwdPlus";
+	break;
+      }
+      case 8: {
+	subDetector = "PixFwdMinus";
 	break;
       }
       default: cout << " something wrong" << endl;
