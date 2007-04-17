@@ -18,4 +18,4 @@
 <use name=SimG4Core/Watcher>
 
 
-<Flags EDM_PLUGIN=1>
+<Flags SEAL_PLUGIN_NAME="ValidationGeometry">
