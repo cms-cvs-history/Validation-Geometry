@@ -10,7 +10,6 @@
 #endif
 #include <iostream>
 #include "DQMServices/Core/interface/MonitorElement.h"
-#include <cstdlib>
 
 //----------------------------------------------------------------------
 MonitorElementMgr::MonitorElementMgr()
